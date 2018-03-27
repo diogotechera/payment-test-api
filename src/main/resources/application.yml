@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: paymentTestApi
+  mvc:
+    locale: en_US
+  jackson:
+    locale: en_US
+    default-property-inclusion: non_null
+
+
+
+ribbon:
+  ServerListRefreshInterval: 1000
+
+management:
+  security:
+    enabled: false
+  context-path: /devops

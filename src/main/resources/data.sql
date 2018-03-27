@@ -1,0 +1,1 @@
+INSERT INTO CLIENT(id) values ('32204a2e-0ce8-48f4-b993-2a688ec2a912');
