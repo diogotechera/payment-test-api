@@ -1,6 +1,6 @@
 # Payment Test API
 
-Uma pequena API para criação de Pagamentos usando Groovy, Spring Boot e Docker
+Uma pequena API para criação de Pagamentos usando Groovy, Spring Boot, Spock e Docker
 
 == O que você precisa
 
