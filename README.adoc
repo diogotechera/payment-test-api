@@ -1,11 +1,11 @@
 # Payment Test API
 
-Uma pequena API para criação de Pagamentos usando Groovy, Spring Boot, Spock e Docker
+Uma pequena API para criação de Pagamentos usando Groovy, Spring Boot, HSQLDB, Spock e Docker
 
 == O que você precisa
 
-Java Versão 1.8
-Docker Versão 1.13
+* Java Versão 1.8
+* Docker Versão 1.13
 
 == Configuração
 
