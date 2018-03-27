@@ -1,1 +1,44 @@
-# payment-test-api
+# Payment Test API
+
+Uma pequena API para criação de Pagamentos usando Groovy, Spring Boot e Docker
+
+== O que você precisa
+Java Versão 1.8
+Docker Versão 1.13
+
+== Configuração
+
+Alterar a propriedade dockerGroup para um grupo que o usuário do Docker tenha acesso
+
+`gradle.properties`
+
+----
+dockerGroup=#GROUP
+----
+
+Depois, para executar o comando para subir a imagem para o repositório:
+
+----
+$ ./gradlew build docker
+----
+
+Para rodar a API pelo Docker, o comando é o seguinte
+----
+$ docker run -p 8080:8080 -t $GROUP/payment-test-api
+....
+2015-03-31 13:25:48.035  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2015-03-31 13:25:48.037  INFO 1 --- [           main] hello.Application                        : Started PaymentApplication in 8.613 seconds (JVM running for 7.293)
+----
+
+Alternativamente, pode ser executado diretamente pelo Gradle:
+
+----
+$ ./gradlew bootRun
+----
+
+
+== Documentação
+
+Segue o link do POSTMAN com as chamadas documentadas:
+
+* https://documenter.getpostman.com/view/24200/collection/RVtxKCM1
