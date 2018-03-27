@@ -3,6 +3,7 @@
 Uma pequena API para criação de Pagamentos usando Groovy, Spring Boot e Docker
 
 == O que você precisa
+
 Java Versão 1.8
 Docker Versão 1.13
 
