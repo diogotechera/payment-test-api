@@ -13,20 +13,23 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.MvcResult
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import org.springframework.web.context.WebApplicationContext
+import payment.api.model.Client
+import payment.api.repository.ClientRepository
 
 @SpringBootTest
-@WebAppConfiguration
-@ActiveProfiles("test")
 @ContextConfiguration(classes = [PaymentApplication])
-@TestExecutionListeners([DependencyInjectionTestExecutionListener.class])
 class SpockApplicationTest extends FixtureApplicationTest{
 
     @Autowired
     protected WebApplicationContext context
 
+    @Autowired
+    ClientRepository repository
     protected MockMvc mvc
 
+
     void setup() {
+        repository.save(new Client(id: '32204a2e-0ce8-48f4-b993-2a688ec2a912'))
         this.mvc = MockMvcBuilders
                 .webAppContextSetup(this.context)
                 .build()

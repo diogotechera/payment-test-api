@@ -7,6 +7,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 import payment.api.SpockApplicationTest
 import payment.api.model.Payment
 import payment.api.model.PaymentType
+import payment.api.repository.ClientRepository
 import payment.api.service.PaymentService
 import spock.lang.Unroll
 
@@ -20,6 +21,7 @@ class PaymentControllerTest extends SpockApplicationTest {
 
     @Autowired
     PaymentService paymentService
+
 
     @Unroll
     'given a #type a payment should be created'(){

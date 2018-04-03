@@ -16,7 +16,7 @@ class PaymentTemplateLoader implements TemplateLoader {
     void load() {
 
         Fixture.of(Payment).addTemplate('valid', new Rule(){{
-            add('amount', random(BigDecimal))
+            add('amount', random(BigDecimal,0.01,10.0,1000.99,10000.9))
             add('type', random(PaymentType))
             add('client', one(Client, 'valid'))
             add('buyer', one(Buyer, 'valid'))
