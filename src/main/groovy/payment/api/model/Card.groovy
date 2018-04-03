@@ -18,6 +18,7 @@ class Card {
 
     @NotNull
     @Column(name= 'card_number')
+    @Pattern(message = "Only numbers", regexp = "^[0-9]*")
     @CreditCardNumber(ignoreNonDigitCharacters=true)
     String number
 

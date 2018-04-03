@@ -19,7 +19,7 @@ class Buyer {
     String email
 
     @NotNull
-    @Pattern(regexp = '^[0-9]{11}')
+    @Pattern(message = 'Invalid CPF format',regexp = '^[0-9]{11}')
     @Column(name= 'buyer_cpf')
     String cpf
 }
